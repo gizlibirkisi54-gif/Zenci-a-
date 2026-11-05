@@ -30,4 +30,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ZenciAI-APK
-          path: ZenciAI_Android/app/build/outputs/apk/debug/app-debug.apk
+          path: ZenciAI_Android/app/build/outputs/apk/debug/app-debug.apk 
