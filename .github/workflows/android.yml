@@ -1,3 +1,4 @@
+
 name: Build Zenci AI APK
 
 on:
@@ -18,7 +19,10 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - uses: android-actions/setup-android@v3
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
 
       - name: Extract project
         run: unzip -q ZenciAI_Android_1.0.zip
@@ -31,4 +35,3 @@ jobs:
         with:
           name: ZenciAI-APK
           path: ZenciAI_Android/app/build/outputs/apk/debug/app-debug.apk
-# APK build workflow
