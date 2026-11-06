@@ -27,6 +27,10 @@ jobs:
 
       - name: Extract project
         run: unzip -q ZenciAI_Android_1.0.zip
+              - name: Show project files
+        run: |
+          echo "===== PROJECT FILES ====="
+          find ZenciAI_Android -maxdepth 5 -type f | sort
 
       - name: Fix Java Kotlin compatibility
         working-directory: ZenciAI_Android
